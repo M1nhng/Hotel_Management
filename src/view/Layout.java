@@ -1,26 +1,24 @@
+package view;
 import javax.swing.*;
 import java.awt.*;
 
-public class App extends JFrame {
-	public App() {
+public class Layout extends JFrame {
+	public Layout() {
 		this.setSize(1400, 850);
 		this.setTitle("Hotel Management");
 		this.setLocationRelativeTo(null);
 		
-		GridLayout flowLayout = new GridLayout(1, 1, 4, 4);
-		this.setLayout(flowLayout);
-		
+		JPanel jPanel_button = new JPanel();
+		jPanel_button.setLayout(new FlowLayout());
 		JButton jButton1 = new JButton("Đặt Phòng");
 		JButton jButton2 = new JButton("Trả Phòng");
-		this.add(jButton1);
-		this.add(jButton2);
+		jPanel_button.add(jButton1);
+		jPanel_button.add(jButton2);
+		
+		this.add(jPanel_button, BorderLayout.WEST);
 		
 		
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-	
-    public static void main(String[] args) {
-        new App();
-    }
 }
