@@ -17,10 +17,10 @@ public class KhachHangController {
 }
 
 public class PhongController {
-    private PhongView view;
+    private Layout view;
     private List<Phong> danhSachPhong;
 
-    public PhongController(PhongView view) {
+    public PhongController(Layout view) {
         this.view = view;
         this.danhSachPhong = new ArrayList<>();
        
